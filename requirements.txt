@@ -196,9 +196,6 @@ Pympler==1.0.1
 PyMsgBox==1.0.9
 PyMySQL==1.1.0
 pynose==1.4.8
-pyobjc-core==9.2
-pyobjc-framework-Cocoa==9.2
-pyobjc-framework-Quartz==9.2
 pyodbc==4.0.39
 pyOpenSSL==23.1.1
 pyotp==2.9.0
