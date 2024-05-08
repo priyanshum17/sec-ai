@@ -1,7 +1,7 @@
 import json
 import together
 
-client = together.Together(api_key="f05b0e9e7a8827d89812a472aac092b61e1c5e4ddb447d7b32baf036e97da446")
+client = together.Together(api_key="API-KEY-HERE")
 
 def important_words(all_entities):
     # Serialize your dictionary to JSON string if it's not already a string
