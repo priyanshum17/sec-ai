@@ -10,7 +10,7 @@ from langchain_community.llms import Together
 # Constants for paths
 CHROMA_PATH = "chroma"
 DATA_PATH = "data-META"
-os.environ["TOGETHER_API_KEY"] = "f05b0e9e7a8827d89812a472aac092b61e1c5e4ddb447d7b32baf036e97da446"
+os.environ["TOGETHER_API_KEY"] = ""
 # os.environ["LANGCHAIN_API_KEY"] = getpass.getpass("Enter LangChain API Key: ")
 
 def load_and_split_documents():
