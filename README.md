@@ -13,15 +13,6 @@ This project uses natural language processing (NLP) to analyze SEC 10-K filings.
 - **JSON**: Facilitates data storage and transfer between functions and APIs.
 - **Together AI**: Provides a powerful language model to extract relevant words from texts, enhancing our text analysis capabilities.
 
-## Installation
-
-To set up this project, clone the repository and install the required dependencies:
-
-```bash
-git clone <repository-url>
-cd <project-folder>
-pip install -r requirements.txt
-
 
 ## How the SEC 10-K AI Analyser Works
 
@@ -41,3 +32,12 @@ Once the important words are identified, they are visualized using a **WordCloud
 
 The word cloud is then displayed through a user-friendly **Streamlit** web interface. This interface allows users to specify the ticker and time frame for the analysis. Designed to be interactive, the system provides users with both visual and textual insights into the analyzed data, enhancing the decision-making process for financial analysts and investors.
 
+
+## Installation
+
+To set up this project, clone the repository and install the required dependencies:
+
+```bash
+git clone <repository-url>
+cd <project-folder>
+pip install -r requirements.txt
