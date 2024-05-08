@@ -64,7 +64,6 @@ feedparser==6.0.10
 filelock==3.13.1
 filetype==1.2.0
 finnhub-python==2.4.18
-finpandas @ file:///Users/priyanshumehta/VSCode/sec-ai/finpandas
 Flask==2.3.3
 fonttools==4.40.0
 frozendict==2.4.4
