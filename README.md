@@ -3,6 +3,10 @@
 ## Overview
 This project uses natural language processing (NLP) to analyze SEC 10-K filings. It extracts significant entities and trends from these documents, presenting them visually in a word cloud. This allows users, especially financial analysts and investors, to quickly gather insights into corporate fundamentals through a streamlined web interface.
 
+[![SEC 10-K AI Analyser](http://img.youtube.com/vi/ipBqIKT9fzc/0.jpg)](http://www.youtube.com/watch?v=ipBqIKT9fzc "SEC 10-K AI Analyser")
+
+*Aplolgies for the voice, I am still recovering from Cholera*
+
 ## Tech Stack
 
 - **Python**: Chosen for its robust library ecosystem and support for data manipulation and NLP.
