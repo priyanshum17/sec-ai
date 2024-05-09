@@ -1,13 +1,24 @@
 import json
 import together
 
+# Initialize the Together API client using the provided API key.
 client = together.Together(api_key="API-KEY-HERE")
 
 def important_words(all_entities):
-    # Serialize your dictionary to JSON string if it's not already a string
+    """
+    Identifies important keywords from a dictionary of 10-K filing terms.
+
+    Args:
+    all_entities (dict or str): A dictionary or JSON string containing keywords from 10-K filings.
+
+    Returns:
+    str: A JSON string containing the top 100 most relevant and specific keywords to the company.
+    """
+    # Serialize the dictionary to a JSON string if it's not already a string.
     entities_json = json.dumps(all_entities) if not isinstance(all_entities, str) else all_entities
     
     try:
+        # Make an API request to generate keywords.
         response = client.chat.completions.create(
             model="mistralai/Mixtral-8x22B-Instruct-v0.1",
             messages=[
@@ -15,20 +26,28 @@ def important_words(all_entities):
                 {"role": "user", "content": entities_json}
             ]
         )
-        # Extracting and returning the response in a JSON format
-        # print(response)
+        # Extract and return the response in JSON format.
         keywords = response.choices[0].message.content
         return keywords
 
     except Exception as e:
+        # Handle exceptions and return an error message in JSON format.
         print(f"Failed to generate keywords due to: {e}")
-        # Return error in JSON format
         return json.dumps({"error": str(e)})
     
 def text_generation(response):
-    # Serialize your dictionary to JSON string if it's not already a string
+    """
+    Generates a text analysis based on a set of keywords.
+
+    Args:
+    response (str): A JSON string containing important keywords or highlights for a company.
+
+    Returns:
+    str: A JSON string containing an analysis of why using a word cloud is a good choice along with insights on specific words.
+    """
     
     try:
+        # Make an API request to generate text analysis.
         response = client.chat.completions.create(
             model="mistralai/Mixtral-8x22B-Instruct-v0.1",
             messages=[
@@ -36,12 +55,11 @@ def text_generation(response):
                 {"role": "user", "content": response}
             ]
         )
-        # Extracting and returning the response in a JSON format
-        # print(response)
+        # Extract and return the response in JSON format.
         keywords = response.choices[0].message.content
         return keywords
 
     except Exception as e:
+        # Handle exceptions and return an error message in JSON format.
         print(f"Failed to generate keywords due to: {e}")
-        # Return error in JSON format
         return json.dumps({"error": str(e)})
